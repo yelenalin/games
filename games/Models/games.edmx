@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="gamesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="game_publisher">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="publisher_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="publisher_name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="game_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="type_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="type_name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="gamelist">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="game_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="game_name" Type="nvarchar(max)" />
+          <Property Name="game_type" Type="nvarchar" MaxLength="50" />
+          <Property Name="game_publisher" Type="nvarchar(max)" />
+          <Property Name="game_data" Type="date" />
+          <Property Name="game_remark" Type="nvarchar(max)" />
+          <Property Name="price" Type="money" />
+          <Property Name="game_image" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="gamesModelStoreContainer">
+          <EntitySet Name="game_publisher" EntityType="Self.game_publisher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="game_type" EntityType="Self.game_type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="gamelist" EntityType="Self.gamelist" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gamesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="game_publisher">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="publisher_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="publisher_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="game_type">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="type_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="gamelist">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="game_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="game_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="game_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="game_publisher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="game_data" Type="DateTime" Precision="0" />
+          <Property Name="game_remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="game_image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="gamesEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="game_publisher" EntityType="Self.game_publisher" />
+          <EntitySet Name="game_type" EntityType="Self.game_type" />
+          <EntitySet Name="gamelist" EntityType="Self.gamelist" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="gamesModelStoreContainer" CdmEntityContainer="gamesEntities1">
+          <EntitySetMapping Name="game_publisher">
+            <EntityTypeMapping TypeName="gamesModel.game_publisher">
+              <MappingFragment StoreEntitySet="game_publisher">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="publisher_no" ColumnName="publisher_no" />
+                <ScalarProperty Name="publisher_name" ColumnName="publisher_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="game_type">
+            <EntityTypeMapping TypeName="gamesModel.game_type">
+              <MappingFragment StoreEntitySet="game_type">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="type_no" ColumnName="type_no" />
+                <ScalarProperty Name="type_name" ColumnName="type_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="gamelist">
+            <EntityTypeMapping TypeName="gamesModel.gamelist">
+              <MappingFragment StoreEntitySet="gamelist">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="game_no" ColumnName="game_no" />
+                <ScalarProperty Name="game_name" ColumnName="game_name" />
+                <ScalarProperty Name="game_type" ColumnName="game_type" />
+                <ScalarProperty Name="game_publisher" ColumnName="game_publisher" />
+                <ScalarProperty Name="game_data" ColumnName="game_data" />
+                <ScalarProperty Name="game_remark" ColumnName="game_remark" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="game_image" ColumnName="game_image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

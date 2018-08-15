@@ -1,0 +1,65 @@
+header{
+    height: 30px;
+    width: 1500px;
+}
+
+.card-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:20px;
+}
+.card-text{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-img-top{
+   max-width: 700px; 
+   overflow: hidden;
+}
+
+.carousel-item img{
+    height: 100%;
+    object-fit:cover;
+    overflow: hidden;
+}
+.pruduct-demo a>div>div:hover{
+box-shadow:0px 0px 6px 2px rgba(255, 255, 255, 0.5);
+}
+/* page */
+.page{
+    margin: auto;
+}
+.pagination>li>a, .pagination>li>span {
+    border-radius: 50% !important;
+    margin: 0 5px;
+    color: aliceblue;
+}
+/* select */
+.select{
+    padding-left: 80%;
+    padding-bottom: 10px;
+}
+select {
+background: #1f2c38;
+border: 1px solid #667780;
+border-radius: .25em;
+color: white;
+height: 30px;
+}
+footer a{
+    color: white;
+}
+@media screen and (max-width:600px) {
+    .select{
+        padding-left: 20px;
+        
+    }
+
+}
+

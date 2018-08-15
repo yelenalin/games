@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+* {
+    font-family: "Lato","微軟正黑體",sans-serif;
+    box-sizing: border-box;
+}
+:root {
+    --primaryColor: #ffd900;
+    /* --primaryColor: #fdff7e; */
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    /* height: 100%; */
+}
+img {
+    /* max-width: 100%; */
+    width: 100%;
+    /* vertical-align: middle; */
+}
+ol,ul,li {
+    list-style: none;
+}
+
+.full-width {
+    width: 100%;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.nopa {
+    padding: 0!important;
+}
+
+body{
+    background-image: url(~/img/green1.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    width: 100%;
+    
+}
+nav a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+

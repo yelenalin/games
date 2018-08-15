@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout-2.cshtml";
+}
+
+<link rel="stylesheet" href="@Url.Content("~/Content/about.css")">
+<!-- ---- header ---- -->
+<header class="container"></header>
+<!-- ---- container ---- -->
+<div class="container clearfix fixed-width">
+    <!-- 聯絡資訊 -->
+    <div class="col-md-12 p-5">
+        <h3 style="border-bottom: 1px solid #fff;">關於我們</h3>
+        <p class="pt-3 text-white" style="margin: auto;line-height: 30px;width: 90%;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate perferendis pariatur blanditiis minus facilis
+            quia eveniet explicabo repellendus, ullam error expedita corrupti odio vero nemo iste quas, nihil debitis
+            ab.<br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quis eveniet, tenetur vel odio nihil tempora hic quia sapiente est sunt repudiandae laborum eligendi corporis consequuntur sint at nemo.<br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad quis eveniet, tenetur vel odio nihil tempora hic quia sapiente est sunt repudiandae laborum eligendi corporis consequuntur sint at nemo.
+        </p>
+        <div class="row p-5">
+            <div class="col-lg-12">
+                <h3 class="my-4">我們的團隊</h3>
+            </div>
+            <div class="col-md-4">
+                <img class="rounded-circle img-fluid d-block mx-auto pl-5 pr-5" src="https://source.unsplash.com/200x200?sin=1" alt="">
+                <h3>林宴綾</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi labore qui eum laborum ea doloribus natus doloremque blanditiis deserunt enim.</p>
+            </div>
+            <div class="col-md-4">
+                <img class="rounded-circle img-fluid d-block mx-auto pl-5 pr-5" src="https://source.unsplash.com/200x200?sin=2" alt="">
+                <h3>林妙慧</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi labore qui eum laborum ea doloribus natus doloremque blanditiis deserunt enim.</p>
+            </div>
+            <div class="col-md-4">
+                <img class="rounded-circle img-fluid d-block mx-auto pl-5 pr-5" src="https://source.unsplash.com/200x200?sin=3" alt="">
+                <h3>林育如</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi labore qui eum laborum ea doloribus natus doloremque blanditiis deserunt enim.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 mb-3" style="background-color: rgb(28, 40, 44);">
+        <h3>聯絡我們</h3>
+        <hr>
+        <div class="col-md-6">
+            <div class="clearfix">
+                <div class="contact-box" style="margin:10px;">
+                    <div class="Circles">
+                        <i class="fas fa-envelope fa-2x m-2"></i>
+                    </div>
+                </div>
+                <div class="contact-box" style="margin:10px;">
+                    <h5 style="line-height: 50px;">fungame0828@gmail.com</h5>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="contact-box" style="margin:10px;">
+                    <div class="Circles">
+                        <i class="fas fa-mobile-alt fa-2x m-2"></i>
+                    </div>
+                </div>
+                <div class="contact-box" style="margin:10px;">
+                    <h5 style="line-height: 50px;">0900-000-000</h5>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="contact-box" style="margin:10px;">
+                    <div class="Circles">
+                        <i class="fas fa-map-marker-alt fa-2x m-2"></i>
+                    </div>
+                </div>
+                <div class="contact-box" style="margin:10px;">
+                    <h5 style="line-height: 50px;">桃園市楊梅區幼獅路二段3號</h5>
+                </div>
+            </div>
+            <div class="map m-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0400099853605!2d121.16983591603193!3d24.930706884020946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34682361c065cbe9%3A0xc24080034849b3e3!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5qGD56u56IuX5YiG572y5bm8542F6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1534211890364"
+                        width="100%" height="300px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- send email -->
+        <div class="col-md-6">
+
+            <form role="form" id="contact-form" class="contact-form pt-3">
+                <div class="row">
+                    <div class="w-100">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="姓名/Name">
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="電子信箱/E-mail">
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="tel" autocomplete="off" id="tel" placeholder="連絡電話/tel">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="w-100">
+                        <div class="form-group">
+                            <textarea class="form-control textarea" rows="8" name="Message" id="Message" placeholder="請輸入留言/Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="b1">發送訊息</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

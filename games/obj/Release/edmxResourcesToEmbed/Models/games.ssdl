@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gamesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="game_publisher">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="publisher_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="publisher_name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="game_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="type_name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="gamelist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="game_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="game_name" Type="nvarchar(max)" />
+    <Property Name="game_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="game_publisher" Type="nvarchar(max)" />
+    <Property Name="game_data" Type="date" />
+    <Property Name="game_remark" Type="nvarchar(max)" />
+    <Property Name="price" Type="money" />
+    <Property Name="game_image" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="gamesModelStoreContainer">
+    <EntitySet Name="game_publisher" EntityType="Self.game_publisher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="game_type" EntityType="Self.game_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gamelist" EntityType="Self.gamelist" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

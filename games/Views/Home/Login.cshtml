@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout-2.cshtml";
+}
+<link rel="stylesheet" href="@Url.Content("~/Content/login.css")">
+<!-- ---- header ---- -->
+<header></header>
+<!-- ---- container ---- -->
+
+<div class="container clearfix fixed-width">
+    <div class="login-header"></div>
+    <div class="card card-container">
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin">
+            <h3>登入</h3><hr>
+            <span id="reauth-email" class="reauth-email mt-3 pt-3"></span>
+            <input type="email" id="inputEmail" class="form-control" placeholder="請輸入信箱/Email address" required autofocus>
+            <input type="password" id="inputPassword" class="form-control mt-3" placeholder="請輸入密碼/Password" required>
+            <div id="remember" class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> 記住我
+                </label>
+            </div>
+            <button class="b1" type="submit">登入</button>
+        </form><!-- /form -->
+        <p style="padding-top: 20px;">
+            <a href="#" class="pt-3">
+                忘記密碼
+            </a>
+            /
+            <a href="#" class="pt-1">
+                @Html.ActionLink("註冊", "signup", "signup")
+            </a>
+        </p>
+    </div><!-- /card-container -->
+
+</div>

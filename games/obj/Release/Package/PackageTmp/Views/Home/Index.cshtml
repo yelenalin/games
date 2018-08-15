@@ -1,0 +1,195 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+   
+}
+<link rel="stylesheet" href="@Url.Content("~/Content/first/index.css")">
+
+<!-- ---- header ---- -->
+<header class="clearfix fixed-width">
+    <!-- ---- banner ---- -->
+    <div class="col-8">
+        <div class="Banner">
+            <img src="~/img/Banner/banner01.jpg">
+        </div>
+        <div class="Banner-demo">
+            <a class="col-3">
+                <img src="~/img/Banner/banner01.jpg">
+            </a>
+            <a class="col-3">
+                <img src="~/img/Banner/banner02.jpg">
+            </a>
+            <a class="col-3">
+                <img src="~/img/Banner/banner03.jpg">
+            </a>
+            <a class="col-3">
+                <img src="~/img/Banner/banner04.jpg">
+            </a>
+        </div>
+    </div>
+    <!-- ---- news ---- -->
+    <div class="col-4" style="padding-top: 5vh; ">
+        <div class="news">
+            <div style="background-color: rgba(255, 255, 255, 0.096);">
+                <h3 style="padding: 10px 10px 10px 20px;">
+                    最新消息
+                    <a href="#" class="btn">MORE</a>
+                </h3>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">【更新】今日更新1.1.25版本</a>
+                </li>
+                <li>
+                    <a href="#">【活動】加入粉絲送豪禮!!</a>
+                </li>
+                <li>
+                    <a href="#">【活動】買遊戲送遊戲~ 好康只到八月底!</a>
+                </li>
+                <li>
+                    <a href="#">【公告】7/26 伺服器維護停機公告</a>
+                </li>
+                <li>
+                    <a href="#">【上架】7/24 新遊戲上架囉!!</a>
+                </li>
+                <li>
+                    <a href="#">【上架】7/20 新遊戲上架囉!!</a>
+                </li>
+            </ul>
+        </div>
+        <div class="news-logo">
+            <img src="~/img/page1.jpg">
+        </div>
+    </div>
+</header>
+<!-- ---- container ---- -->
+<div class="container clearfix fixed-width">
+
+
+    <!-- ---- newGames ---- -->
+    <!-- <div class="newGames">
+        <h3>最新上架</h3>
+    </div> -->
+    <!-- ---- suggest---- -->
+    <div class="suggest clearfix">
+        <div class="col-6">
+            <div class="hot">
+                <h2>
+                    <i class="fab fa-hotjar"></i> 熱門遊戲
+                </h2>
+                <div class="col-6">
+                    <div class="ranking">
+                        <div style="background-color: rgba(255, 255, 255, 0.096);">
+                            <h3 style="padding: 10px 10px 10px 20px;">
+                                本月排行
+                            </h3>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    精靈寶可夢 Let's Go！皮卡丘
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">俠盜獵車手 5</a>
+                            </li>
+                            <li>
+                                <a href="#">刺客教條：奧德賽</a>
+                            </li>
+                            <li>
+                                <a href="#">人中之龍 3</a>
+                            </li>
+                            <li>
+                                <a href="#">無雙 OROCHI 蛇魔 3</a>
+                            </li>
+                            <li>
+                                <a href="#">惡靈古堡 2 重製版</a>
+                            </li>
+                            <li>
+                                <a href="#">我的世界</a>
+                            </li>
+                            <li>
+                                <a href="#">死亡終局 輪迴試煉</a>
+                            </li>
+                            <li>
+                                <a href="#">勇者鬥惡龍 XI 尋覓逝去的時光</a>
+                            </li>
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <a href="#">
+                            <img src="~/img/hot1.jpg">
+                            <div class="card-text">
+                                真・三國無双７ with 猛将伝
+                                <div class="btn">NT$ 1,038</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <img src="~/img/hot3.jpg">
+                            <div class="
+                                    card-text">
+                                <div>
+                                    Joe Dever's Lone Wolf HD Remastered
+                                    <div class="btn">NT$ 398</div>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6 ">
+        <div class="sales">
+            <div class="col-12">
+                <h2>
+                    <i class="far fa-clock clearfix"></i> 限時特賣
+                    <div class="dayBox">倒數 00 : 00 : 00</div>
+                </h2>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <img src="~/img/suggest4.jpg">
+                    <div class="card-text">
+                        <h4 class="card-title">
+                            SWORD ART ONLINE
+                        </h4>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6" id="card">
+                <div class="card">
+                    <img src="~/img/suggest2.jpg">
+                    <div class="card-text">
+                        <h4 class="card-title">
+                            SWORD ART ONLINE
+                            <!-- <div class="btn"><div class="btnOff">-50% OFF</div>NT$ 588</div> -->
+                        </h4>
+
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="~/img/suggest3.jpg">
+                    <div class="card-text">
+                        <h4 class="card-title">
+                            SWORD ART ONLINE
+                        </h4>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+   
+

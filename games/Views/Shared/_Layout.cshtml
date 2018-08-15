@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="@Url.Content("https://code.jquery.com/jquery-3.3.1.min.js")"></script>
+
+    <link rel="stylesheet" href="@Url.Content("https://use.fontawesome.com/releases/v5.1.1/css/all.css")" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <script src="@Url.Content("~/Scripts/menu.js")"></script>
+    <link rel="stylesheet" href="@Url.Content("~/Content/style.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/PadStyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/PCStyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/PhoneStyle.css")">
+    <title>好好玩遊戲販售網</title>
+</head>
+<body>
+    <!-- ---- nav ---- -->
+    <nav class="full-width ">
+        <a href="#" class="burger-box">
+            <div class="burger"></div>
+        </a>
+        <div class="clearfix fixed-width">
+
+            <a class="menu-logo" href="@Url.Action("Index", "Home")"><img src="~/img/logo-2.png" /></a>
+
+
+            <ul class="menu">
+                <li>
+                    @Html.ActionLink("最新消息", "News", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("限時優惠", "LimitedTimeSpecial", "Home")
+                </li>
+                <li>
+
+                    <a href="#" id="menu-class">遊戲 ▾</a>
+                    <ul class="menu-calss">
+                        <li>
+                            @Html.ActionLink("休閒", "Leisure", "Game")
+                        </li>
+                        <li>
+                            @Html.ActionLink("多人連線", "Mulpitlayer", "Game")
+                        </li>
+                        <li>
+                            @Html.ActionLink("角色扮演", "Cosplay", "Game")
+                        </li>
+                        <li>
+                            @Html.ActionLink("冒險", "Adventure", "Game")
+                        </li>
+                        <li>
+                            @Html.ActionLink("動作", "Action", "Game")
+                        </li>
+                        <li>
+                            @Html.ActionLink("策略", "Strategy", "Game")
+                        </li>
+                        <li>
+                            @Html.ActionLink("獨立", "Independent", "Game")
+                        </li>
+                        <li>
+                            @Html.ActionLink("競速", "Racing", "Game")
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    @Html.ActionLink("點數卡", "PointCard", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("關於", "About", "Home")
+                </li>
+            </ul>
+            <ul class="login">
+                <li>
+                    <a href="@Url.Action("ShoppingCart", "Home")"><img src="~/img/shopping-cart.png" /></a>
+                </li>
+                <li>
+                    @Html.ActionLink("登入", "Login", "Home")
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+            <!-- ---- footer ---- -->
+            <footer class="full-width">
+                <div class="footer fixed-width clearfix">
+                    <div class="col-4">
+                        <h3>會員專區</h3>
+                        <ul>
+                            <li><a href="#">我的帳戶</a></li>
+                            <li><a href="#">購物車</a></li>
+                            <li><a href="#">訂單查詢</a></li>
+                            <li><a href="#">聯絡客服</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h3>關於我們</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque a cupiditate exercitationem libero iste
+                            autem eaque, ab consequatur repellendus, ex saepe necessitatibus, provident ipsam quisquam quae accusantium!
+                            Odit, laborum animi.
+                        </p>
+
+                    </div>
+                    <div class="col-4">
+                        <h3>關注我們</h3>
+                        <img class="QRcode" src="@Url.Content("~/img/QRcode.png")">
+                        <div class="fb clearfix">
+                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-behance fa-2x"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12">copyrights &copy; Fun Game 2018</div>
+            </footer>
+       
+
+        
+</body>
+</html>

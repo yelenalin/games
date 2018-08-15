@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gamesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="game_publisher">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="publisher_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="publisher_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="game_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="gamelist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="game_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="game_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="game_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="game_publisher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="game_data" Type="DateTime" Precision="0" />
+    <Property Name="game_remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="game_image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="gamesEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="game_publisher" EntityType="Self.game_publisher" />
+    <EntitySet Name="game_type" EntityType="Self.game_type" />
+    <EntitySet Name="gamelist" EntityType="Self.gamelist" />
+  </EntityContainer>
+</Schema>

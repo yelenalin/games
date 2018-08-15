@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B52C181D-3E66-4583-8AF7-9CFAB8804013}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>games</RootNamespace>
+    <AssemblyName>games</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GameController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\signupController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\gamelist.cs">
+      <DependentUpon>games.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\games.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>games.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\games.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>games.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\games.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>games.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\game_publisher.cs">
+      <DependentUpon>games.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\game_type.cs">
+      <DependentUpon>games.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Typelink.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\about.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Browse.css" />
+    <Content Include="Content\cardBrowse.css" />
+    <Content Include="Content\first\index.css" />
+    <Content Include="Content\first\PadStyle.css" />
+    <Content Include="Content\first\PCStyle.css" />
+    <Content Include="Content\first\PhoneStyle.css" />
+    <Content Include="Content\first\style.css" />
+    <Content Include="Content\login.css" />
+    <Content Include="Content\news.css" />
+    <Content Include="Content\PadStyle.css" />
+    <Content Include="Content\PCStyle.css" />
+    <Content Include="Content\PhoneStyle.css" />
+    <Content Include="Content\signup.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="game\A Light in the Dark\header.jpg" />
+    <Content Include="game\A Light in the Dark\movie480.webm" />
+    <Content Include="game\A Light in the Dark\ss_054afb17971df4925905471ac7578c4b84b9ca24.1920x1080.jpg" />
+    <Content Include="game\A Light in the Dark\ss_7ae6cf49d1d4a65081e938b155d1c168a0d7169f.1920x1080.jpg" />
+    <Content Include="game\A Light in the Dark\ss_f46d5938165931fc6dc41bf27d1edf8f3e804bb2.1920x1080.jpg" />
+    <Content Include="game\A Light in the Dark\商品主檔.txt" />
+    <Content Include="game\Angels of Death\Angels of Death.txt" />
+    <Content Include="game\Angels of Death\header.jpg" />
+    <Content Include="game\Angels of Death\ss_1be63eb124ab327c68d76b5e35282e83a9d26638.1920x1080.jpg" />
+    <Content Include="game\Angels of Death\ss_4c8004202f752862913381960ab537fc7d65504a.1920x1080.jpg" />
+    <Content Include="game\Angels of Death\ss_5188960a9344646b28cea6a1d91fb5268cf35cbd.1920x1080.jpg" />
+    <Content Include="game\ARK Survival Evolved\ARK Survival Evolved.txt" />
+    <Content Include="game\ARK Survival Evolved\header.jpg" />
+    <Content Include="game\ARK Survival Evolved\movie480.webm" />
+    <Content Include="game\ARK Survival Evolved\ss_01cbef83fe28d64ee5a3d39a86043fb1e49abd31.1920x1080.jpg" />
+    <Content Include="game\ARK Survival Evolved\ss_1e494e45758b4dd3323b1c359047aaaa5be101d5.1920x1080.jpg" />
+    <Content Include="game\ARK Survival Evolved\ss_ffe9f0e2e23892f3bb6188e5a3eed0f60a08baf4.1920x1080.jpg" />
+    <Content Include="game\Assassin%27s Creed® Origins\Assassin%27s Creed® Origins.txt" />
+    <Content Include="game\Assassin%27s Creed® Origins\header.jpg" />
+    <Content Include="game\Assassin%27s Creed® Origins\movie480.webm" />
+    <Content Include="game\Assassin%27s Creed® Origins\ss_1a0ab42e93e51c48ad9a6bda7f408958e09a43b0.1920x1080.jpg" />
+    <Content Include="game\Assassin%27s Creed® Origins\ss_4de2c8e9d81b3855bbee2708381aa7a56810ba70.1920x1080.jpg" />
+    <Content Include="game\Assassin%27s Creed® Origins\ss_fbed28aec9059db9477e9bf8fb2ffa92c3ea9e56.1920x1080.jpg" />
+    <Content Include="game\Clicker Heroes\Clicker Heroes.txt" />
+    <Content Include="game\Clicker Heroes\ClickerHeroes.jpg" />
+    <Content Include="game\Clicker Heroes\ss_4b6bc4a95a6549c4363100542878c0a3b8871b9f.1920x1080.jpg" />
+    <Content Include="game\Clicker Heroes\ss_9386e74ad9ed44ce1531e06eed7b42e824e83687.1920x1080.jpg" />
+    <Content Include="game\DARK SOULS™ III\ClickerHeroes.jpg" />
+    <Content Include="game\DARK SOULS™ III\DARK SOULS™ III.txt" />
+    <Content Include="game\DARK SOULS™ III\header.jpg" />
+    <Content Include="game\DARK SOULS™ III\ss_12c4d9a3c04d6d340ffea9335441eb2ad84e0028.1920x1080.jpg" />
+    <Content Include="game\DARK SOULS™ III\ss_1318a04ef11d87f38aebe6d47a96124f8f888ca8.1920x1080.jpg" />
+    <Content Include="game\DARK SOULS™ III\ss_5efd318b85a3917d1c6e717f4cb813b47547cd6f.1920x1080.jpg" />
+    <Content Include="game\DARK SOULS™ III\ss_975ca4966b9b627f8d9bb0d2c9b6743dfceac6da.1920x1080.jpg" />
+    <Content Include="game\Dota 2\Dota 2.txt" />
+    <Content Include="game\Dota 2\header.jpg" />
+    <Content Include="game\Dota 2\ss_1f3b5f5ccf8b159294914c3fe028128a787304b6.1920x1080.jpg" />
+    <Content Include="game\Dota 2\ss_86d675fdc73ba10462abb8f5ece7791c5047072c.1920x1080.jpg" />
+    <Content Include="game\Dota 2\ss_ad8eee787704745ccdecdfde3a5cd2733704898d.1920x1080.jpg" />
+    <Content Include="game\Dota 2\ss_e0a92f15a6631a8186df79182d0fe28b5e37d8cb.1920x1080.jpg" />
+    <Content Include="game\DYNASTY WARRIORS 8\DYNASTY WARRIORS 8.txt" />
+    <Content Include="game\DYNASTY WARRIORS 8\header.jpg" />
+    <Content Include="game\DYNASTY WARRIORS 8\ss_0404b64be85ab151bb466d601775498aebdf49ef.1920x1080.jpg" />
+    <Content Include="game\DYNASTY WARRIORS 8\ss_4688b24539e71f4ec08a6bb913310742b92b45d4.1920x1080.jpg" />
+    <Content Include="game\DYNASTY WARRIORS 8\ss_6874b06b3f56effa23510e8af4fb866ee3e7266e.1920x1080.jpg" />
+    <Content Include="game\DYNASTY WARRIORS 8\ss_d27cae3618580db1ec275e3767d5a0e74aeac954.1920x1080.jpg" />
+    <Content Include="game\F1 2018\F1 2018.txt" />
+    <Content Include="game\F1 2018\header.jpg" />
+    <Content Include="game\F1 2018\ss_02e9fff07dd687845bed852407145ca9938d0e86.1920x1080.jpg" />
+    <Content Include="game\F1 2018\ss_1d81814a684b4edc7725dec5a80e245786aa5244.1920x1080.jpg" />
+    <Content Include="game\F1 2018\ss_3814e6785183dc8d155178a43590c0da2f49528a.1920x1080.jpg" />
+    <Content Include="game\F1 2018\ss_9545ecd9884ca37a68d5367c2201e0e13ab006f8.1920x1080.jpg" />
+    <Content Include="game\F1 2018\ss_b492d8be133c64f36550052da56c676269ae6c69.1920x1080.jpg" />
+    <Content Include="game\Fallout 4\header.jpg" />
+    <Content Include="game\Fallout 4\movie480.webm" />
+    <Content Include="game\Fallout 4\ss_910437ac708aed7c028f6e43a6224c633d086b0a.1920x1080.jpg" />
+    <Content Include="game\Fallout 4\ss_f7861bd71e6c0c218d8ff69fb1c626aec0d187cf.1920x1080.jpg" />
+    <Content Include="game\Fallout 4\商品主檔.txt" />
+    <Content Include="game\FAST BEAT LOOP RACER GT  環狀賽車GT\FAST BEAT LOOP RACER GT  環狀賽車GT.txt" />
+    <Content Include="game\FAST BEAT LOOP RACER GT  環狀賽車GT\header.jpg" />
+    <Content Include="game\FAST BEAT LOOP RACER GT  環狀賽車GT\ss_00bb7310d2ba87c2012debc8c1ce3ea2f7ca27f9.1920x1080.jpg" />
+    <Content Include="game\FAST BEAT LOOP RACER GT  環狀賽車GT\ss_5d9436dcf2980a2c413c6b7024a3c255438403e4.1920x1080.jpg" />
+    <Content Include="game\FAST BEAT LOOP RACER GT  環狀賽車GT\ss_c00dd7b7a55e9ee58e4d09ddb2c1052c73540263.1920x1080.jpg" />
+    <Content Include="game\FAST BEAT LOOP RACER GT  環狀賽車GT\ss_f6976efc8c4fbfb0d576634f3abfbd50ea89326a.1920x1080.jpg" />
+    <Content Include="game\FEZ\FEZ.txt" />
+    <Content Include="game\FEZ\header.jpg" />
+    <Content Include="game\FEZ\ss_56dbc476fb535da688e126dde9402ff682bc5874.1920x1080.jpg" />
+    <Content Include="game\FEZ\ss_acfee8996e8e1e13c3a4db9a784ee1e297850537.1920x1080.jpg" />
+    <Content Include="game\FEZ\ss_e7739ce8acb1fa3f4f9acb08a938803c5b40ffe8.1920x1080.jpg" />
+    <Content Include="game\FINAL FANTASY XV WINDOWS EDITION\FINAL FANTASY XV WINDOWS EDITION.txt" />
+    <Content Include="game\FINAL FANTASY XV WINDOWS EDITION\header.jpg" />
+    <Content Include="game\FINAL FANTASY XV WINDOWS EDITION\movie480 %281%29.webm" />
+    <Content Include="game\FINAL FANTASY XV WINDOWS EDITION\ss_031800eb49e2c1da5d8a31f8fe0bbb64544c2d0a.1920x1080.jpg" />
+    <Content Include="game\FINAL FANTASY XV WINDOWS EDITION\ss_5892506e2db87eb44cb0c4a2d6844c2bd2f57fbb.1920x1080.jpg" />
+    <Content Include="game\FINAL FANTASY XV WINDOWS EDITION\ss_999e73c2cb361d41451d1a84d85f3ff59aa30110.1920x1080.jpg" />
+    <Content Include="game\FINAL FANTASY XV WINDOWS EDITION\ss_e2d5e3c2ae507a798b139efc8b49386cbce7899d.1920x1080.jpg" />
+    <Content Include="game\FINAL FANTASY® XIII\FINAL FANTASY® XIII.txt" />
+    <Content Include="game\FINAL FANTASY® XIII\header.jpg" />
+    <Content Include="game\FINAL FANTASY® XIII\movie480.webm" />
+    <Content Include="game\FINAL FANTASY® XIII\ss_02d9c5fd6308948221b1bef8509dfd6000e7d7d9.1920x1080.jpg" />
+    <Content Include="game\FINAL FANTASY® XIII\ss_0cec13de14f2bfaecc1e66fe5ec2051e3acd0679.1920x1080.jpg" />
+    <Content Include="game\FINAL FANTASY® XIII\ss_c0dc1ccba0c459e86c03b13ab98121a9d4900075.1920x1080.jpg" />
+    <Content Include="game\Goat Simulator\header.jpg" />
+    <Content Include="game\Goat Simulator\Goat Simulator.txt" />
+    <Content Include="game\Goat Simulator\ss_0f0e9008ba21b5eed106147cdc355d3c7bad683a.1920x1080.jpg" />
+    <Content Include="game\Goat Simulator\ss_fa0673c4bf6e43a4092ea351a726d913d81b5953.1920x1080.jpg" />
+    <Content Include="game\Grand Theft Auto V\Grand Theft Auto V.txt" />
+    <Content Include="game\Grand Theft Auto V\header.jpg" />
+    <Content Include="game\Grand Theft Auto V\movie480-1.webm" />
+    <Content Include="game\Grand Theft Auto V\movie480-2.webm" />
+    <Content Include="game\Guts and Glory\header.jpg" />
+    <Content Include="game\Guts and Glory\ss_0d865f1b17093dba8f94845533eb4510453765f8.1920x1080.jpg" />
+    <Content Include="game\Guts and Glory\ss_30daca39ecf2087bf33348145d51dfcca5f994a1.1920x1080.jpg" />
+    <Content Include="game\Guts and Glory\ss_3ccbbc7dd25d81000bfd60dc34f98f30193954b3.1920x1080.jpg" />
+    <Content Include="game\Guts and Glory\ss_5d4c5a3779a59938e6f4d0bd7ff5abe14740015d.1920x1080.jpg" />
+    <Content Include="game\Guts and Glory\商品主檔.txt" />
+    <Content Include="game\ICEY\header.jpg" />
+    <Content Include="game\ICEY\ICEY.txt" />
+    <Content Include="game\ICEY\ss_748179c1c09bd1e8e176b88a74bb51b637220d88.1920x1080.jpg" />
+    <Content Include="game\ICEY\ss_8cb69ce8fe77fcc6426938ad1c3f4c9bf9e99204.1920x1080.jpg" />
+    <Content Include="game\ICEY\ss_94f08c23ccd943f8474ab9bbff9116d69d221183.1920x1080.jpg" />
+    <Content Include="game\ICEY\ss_c81b74c2d6e13d2847f9be9df897ae372a185cfb.1920x1080.jpg" />
+    <Content Include="game\Life Goes On Done to Death\header.jpg" />
+    <Content Include="game\Life Goes On Done to Death\Life Goes On Done to Death.txt" />
+    <Content Include="game\Life Goes On Done to Death\ss_ed7f87c5ee0d92cd7365ff2064c2cec93d80a342.1920x1080.jpg" />
+    <Content Include="game\LIMBO\header.jpg" />
+    <Content Include="game\LIMBO\LIMBO.txt" />
+    <Content Include="game\LIMBO\ss_1e63610f382c749a7b1abc3626959ee6ee8a5281.1920x1080.jpg" />
+    <Content Include="game\LIMBO\ss_a62bc173abb93fbc12dbb6b8d366524a43c1356f.1920x1080.jpg" />
+    <Content Include="game\LIMBO\ss_c55254f1b9edbf9da5a91bfeb9d36a1b6512f412.1920x1080.jpg" />
+    <Content Include="game\LIMBO\ss_d60b68ede152868b16d2175b827dcd8eb9a8e4e5.1920x1080.jpg" />
+    <Content Include="game\Montaro\header.jpg" />
+    <Content Include="game\Montaro\Montaro.txt" />
+    <Content Include="game\Montaro\ss_68d47ccf2ce595f14d7736dbc967345938fdeeeb.1920x1080.jpg" />
+    <Content Include="game\Montaro\ss_b7a3f3963d8027a68f444fc653653e7f5326d87e.1920x1080.jpg" />
+    <Content Include="game\Montaro\ss_bc0c29a828cafa15d1756a2bb3cad723d68beded.1920x1080.jpg" />
+    <Content Include="game\MotoGP™18\header.jpg" />
+    <Content Include="game\MotoGP™18\MotoGP™18.txt" />
+    <Content Include="game\MotoGP™18\ss_34164f1ed53a4481cea8b70d1caaef9203b7416f.1920x1080.jpg" />
+    <Content Include="game\MotoGP™18\ss_8ec93a839c19535846d316c4b8f15b1d4280ca2a.1920x1080.jpg" />
+    <Content Include="game\MotoGP™18\ss_b81a1c94100296a57ec6b9d7b4d4c174d052db01.1920x1080.jpg" />
+    <Content Include="game\MotoGP™18\ss_db8eb995d949dbe3ee40edd5b9bd0db4794df0f8.1920x1080.jpg" />
+    <Content Include="game\PixARK\header.jpg" />
+    <Content Include="game\PixARK\PixARK.txt" />
+    <Content Include="game\PixARK\ss_36ede42ef252e78e38a58db266ee87a39e49266f.1920x1080.jpg" />
+    <Content Include="game\PixARK\ss_4d81ab338ab7cccae6c05e93c923e7c983b90dc4.1920x1080.jpg" />
+    <Content Include="game\PixARK\ss_9305876c1d1e8a1ee82ac11854da606bcba27059.1920x1080.jpg" />
+    <Content Include="game\Plague Inc Evolved\header.jpg" />
+    <Content Include="game\Plague Inc Evolved\Plague Inc Evolved.txt" />
+    <Content Include="game\Plague Inc Evolved\ss_204aafc57176eba9799ae0b269600fd5b0dcdce4.1920x1080.jpg" />
+    <Content Include="game\Plague Inc Evolved\ss_3e8ad5f285c79a136ca9ae0b5114d550456db9a5.1920x1080.jpg" />
+    <Content Include="game\Plague Inc Evolved\ss_5b2811c9ca476e1ca489c5ac4ae879024eb0a537.1920x1080.jpg" />
+    <Content Include="game\Plague Inc Evolved\ss_abaf7784591bb85246eee2244db5d6d4fa0db524.1920x1080.jpg" />
+    <Content Include="game\PLAYERUNKNOWN%27S BATTLEGROUNDS\header.jpg" />
+    <Content Include="game\PLAYERUNKNOWN%27S BATTLEGROUNDS\movie480.webm" />
+    <Content Include="game\PLAYERUNKNOWN%27S BATTLEGROUNDS\PLAYERUNKNOWN%27S BATTLEGROUNDS.txt" />
+    <Content Include="game\PLAYERUNKNOWN%27S BATTLEGROUNDS\ss_109d7072cf85f5b3b1e3dacadf3009718db451c4.1920x1080.jpg" />
+    <Content Include="game\PLAYERUNKNOWN%27S BATTLEGROUNDS\ss_23af2e59855a833c22d0c11ca23a719f54a554ff.1920x1080.jpg" />
+    <Content Include="game\PLAYERUNKNOWN%27S BATTLEGROUNDS\ss_2c79b3b590b186b10bf082d37674621f204a3497.1920x1080.jpg" />
+    <Content Include="game\PLAYERUNKNOWN%27S BATTLEGROUNDS\ss_e7e79847eff0933de92192bb62b8bc7068d611da.1920x1080.jpg" />
+    <Content Include="game\Raft\header.jpg" />
+    <Content Include="game\Raft\ss_189ac1fa4505a10365bcf9c0c3ba61e7a618ae0f.1920x1080.jpg" />
+    <Content Include="game\Raft\ss_594b5fab052123e5f96088df3ec3c9b7cec62e88.1920x1080.jpg" />
+    <Content Include="game\Raft\ss_b327651cc0fdd24615b5e9e4f71f53f032ab712a.1920x1080.jpg" />
+    <Content Include="game\Raft\商品主檔.txt" />
+    <Content Include="game\Road Redemption\header.jpg" />
+    <Content Include="game\Road Redemption\Road Redemption.txt" />
+    <Content Include="game\Road Redemption\ss_53a6cb60ee865df2b7f583b3f673e61700d6a735.1920x1080.jpg" />
+    <Content Include="game\Road Redemption\ss_a9eec27e5ae647228b719c2a2affca9bc6ec6b02.1920x1080.jpg" />
+    <Content Include="game\Road Redemption\ss_c19ff5deec8325b824f8e2de0c6e12f85083c572.1920x1080.jpg" />
+    <Content Include="game\South Park™ The Fractured But Whole™\header.jpg" />
+    <Content Include="game\South Park™ The Fractured But Whole™\South Park™ The Fractured But Whole™.txt" />
+    <Content Include="game\South Park™ The Fractured But Whole™\ss_2f851a0caefb87f6e8a27dae8730194edcdc23d4.1920x1080.jpg" />
+    <Content Include="game\South Park™ The Fractured But Whole™\ss_69d6860b00af0a0e0031b03c9c7e869339679aaf.1920x1080.jpg" />
+    <Content Include="game\South Park™ The Fractured But Whole™\ss_c3be86ef593551a05364c6b0d9c1b0446c18415b.1920x1080.jpg" />
+    <Content Include="game\South Park™ The Fractured But Whole™\ss_cab2565bbb675f76400dae3a6a267ebf19a9d53c.1920x1080.jpg" />
+    <Content Include="game\Squad\header.jpg" />
+    <Content Include="game\Squad\Squad.txt" />
+    <Content Include="game\Squad\ss_6107421ddfb302f617dd8e1378992556ce6bc6f7.1920x1080.jpg" />
+    <Content Include="game\Squad\ss_63feb5821b7378d9b51f2d70a9af18864df86437.1920x1080.jpg" />
+    <Content Include="game\Squad\ss_eed84f23dce63e03ddfaa2ea944cd4802f0393ff.1920x1080.jpg" />
+    <Content Include="game\Survisland\header.jpg" />
+    <Content Include="game\Survisland\ss_6427602a92164028d947ad1fe603693b0751eede.1920x1080.jpg" />
+    <Content Include="game\Survisland\ss_66fb345acc66eeb78c889d6de749fe1aed5d2442.1920x1080.jpg" />
+    <Content Include="game\Survisland\ss_a8b04a4875c2bef0514b89928de03258a253b454.1920x1080.jpg" />
+    <Content Include="game\Survisland\Survisland.txt" />
+    <Content Include="game\Terraria\header.jpg" />
+    <Content Include="game\Terraria\ss_8c03886f214d2108cafca13845533eaa3d87d83f.1920x1080.jpg" />
+    <Content Include="game\Terraria\ss_9edd98caaf9357c2f40758f354475a56e356e8b0.1920x1080.jpg" />
+    <Content Include="game\Terraria\ss_ae168a00ab08104ba266dc30232654d4b3c919e5.1920x1080.jpg" />
+    <Content Include="game\Terraria\Terraria.txt" />
+    <Content Include="game\The Witcher® 3 Wild Hunt\header.jpg" />
+    <Content Include="game\The Witcher® 3 Wild Hunt\movie480.webm" />
+    <Content Include="game\The Witcher® 3 Wild Hunt\ss_107600c1337accc09104f7a8aa7f275f23cad096.1920x1080.jpg" />
+    <Content Include="game\The Witcher® 3 Wild Hunt\ss_90a33d7764a2d23306091bfcb52265c3506b4fdb.1920x1080.jpg" />
+    <Content Include="game\The Witcher® 3 Wild Hunt\The Witcher® 3 Wild Hunt.txt" />
+    <Content Include="game\This War of Mine\header.jpg" />
+    <Content Include="game\This War of Mine\movie480.webm" />
+    <Content Include="game\This War of Mine\ss_c4d977570392165f66f25e7298a31e5af35eb6da.1920x1080.jpg" />
+    <Content Include="game\This War of Mine\ss_c8eb3645b5b72150cfbb4462da52c8ff2ca1054f.1920x1080.jpg" />
+    <Content Include="game\This War of Mine\ss_eb333d7e52532a937fc5ecd6fc17ce5270a21e6d.1920x1080.jpg" />
+    <Content Include="game\This War of Mine\This War of Mine.txt" />
+    <Content Include="game\Tom Clancy%27s Rainbow Six® Siege\header.jpg" />
+    <Content Include="game\Tom Clancy%27s Rainbow Six® Siege\ss_07da51726f2eac0e97a73175618ef60389eae3e2.1920x1080.jpg" />
+    <Content Include="game\Tom Clancy%27s Rainbow Six® Siege\ss_9350bedcb7f18819ac5e25e2cc436a10afcc2a38.1920x1080.jpg" />
+    <Content Include="game\Tom Clancy%27s Rainbow Six® Siege\ss_f8b0572f49f5a25ddb2200d3fb5277ebabd482eb.1920x1080.jpg" />
+    <Content Include="game\Tom Clancy%27s Rainbow Six® Siege\Tom Clancy%27s Rainbow Six® Siege.txt" />
+    <Content Include="game\Tom Clancy’s The Division™\header.jpg" />
+    <Content Include="game\Tom Clancy’s The Division™\movie480.webm" />
+    <Content Include="game\Tom Clancy’s The Division™\ss_018b8d4960001c44ddf5d9c4d8f3af22ce9eb98d.1920x1080.jpg" />
+    <Content Include="game\Tom Clancy’s The Division™\ss_1123f8768c55a8e8455b7a70cbda6265bfae26c4.1920x1080.jpg" />
+    <Content Include="game\Tom Clancy’s The Division™\ss_59ea986dd5448b4b539a79c4461feb835cb02abe.1920x1080.jpg" />
+    <Content Include="game\Tom Clancy’s The Division™\Tom Clancy’s The Division™.txt" />
+    <Content Include="game\Ultimate Chicken Horse\header.jpg" />
+    <Content Include="game\Ultimate Chicken Horse\movie480.webm" />
+    <Content Include="game\Ultimate Chicken Horse\ss_2710e667b2f2062cbba94d5bec9d871fa267497a.1920x1080.jpg" />
+    <Content Include="game\Ultimate Chicken Horse\ss_655c28029bccde1d08739183da1ad7cda0cfdd28.1920x1080.jpg" />
+    <Content Include="game\Ultimate Chicken Horse\ss_8da63477e2d530779d7305a1c9a82292a9bab103.1920x1080.jpg" />
+    <Content Include="game\Ultimate Chicken Horse\商品主檔.txt" />
+    <Content Include="game\Ultimate General Civil War\header.jpg" />
+    <Content Include="game\Ultimate General Civil War\ss_099b5de21f169d4c83fb42cf21f7ef5c295b8d63.1920x1080.jpg" />
+    <Content Include="game\Ultimate General Civil War\ss_369d79e0dc410e83beb836af308b6aa02e13c610.1920x1080.jpg" />
+    <Content Include="game\Ultimate General Civil War\ss_eefd0d773d67933a02cfefb968a1bfa93f05a739.1920x1080.jpg" />
+    <Content Include="game\Ultimate General Civil War\ss_f868c5d31b676c84185520d41aa4f3b461e88f92.1920x1080.jpg" />
+    <Content Include="game\Ultimate General Civil War\Ultimate General Civil War.txt" />
+    <Content Include="game\UNO\header.jpg" />
+    <Content Include="game\UNO\ss_31903bb595a99d94dfd953300d3ddd6cf120a82b.1920x1080.jpg" />
+    <Content Include="game\UNO\ss_b050b244619bdc27bb3b2cf4b070334385fcbea7.1920x1080.jpg" />
+    <Content Include="game\UNO\UNO.txt" />
+    <Content Include="game\Wizard of Legend\header.jpg" />
+    <Content Include="game\Wizard of Legend\ss_1d8250d3c14f0e01130db3490d0bface52ee3ba1.1920x1080.jpg" />
+    <Content Include="game\Wizard of Legend\ss_6c0a7594ca36e2ab1bf77b518ed1de8938942bd9.1920x1080.jpg" />
+    <Content Include="game\Wizard of Legend\ss_8efdb01e68a2c7a5d2c7570eaaebbb9322c4cdc9.1920x1080.jpg" />
+    <Content Include="game\Wizard of Legend\Wizard of Legend.txt" />
+    <Content Include="game\World of Tanks Blitz\header.jpg" />
+    <Content Include="game\World of Tanks Blitz\ss_16f474a443ce712fdb34a8334d23af46548fefc3.1920x1080.jpg" />
+    <Content Include="game\World of Tanks Blitz\ss_2caaa3610655a7bff429933c048252519187cd60.1920x1080.jpg" />
+    <Content Include="game\World of Tanks Blitz\ss_9de0d2dfb385b4fc0241e953d4d5177621527eaf.1920x1080.jpg" />
+    <Content Include="game\World of Tanks Blitz\ss_c8ecf093a302b798205cddc78cb18118bc6a51f5.1920x1080.jpg" />
+    <Content Include="game\World of Tanks Blitz\World of Tanks Blitz.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="img\2015042013321856226.jpg" />
+    <Content Include="img\Banner\banner01.jpg" />
+    <Content Include="img\Banner\banner02.jpg" />
+    <Content Include="img\Banner\banner03.jpg" />
+    <Content Include="img\Banner\banner04.jpg" />
+    <Content Include="img\green.jpg" />
+    <Content Include="img\green1.jpg" />
+    <Content Include="img\hot1.jpg" />
+    <Content Include="img\hot2.jpg" />
+    <Content Include="img\hot3.jpg" />
+    <Content Include="img\logo-2.png" />
+    <Content Include="img\logo-3.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\mycard\1000.jpg" />
+    <Content Include="img\mycard\150.jpg" />
+    <Content Include="img\mycard\300.jpg" />
+    <Content Include="img\mycard\500.jpg" />
+    <Content Include="img\mycard\recommend-7.jpg" />
+    <Content Include="img\nextBtnTop.png" />
+    <Content Include="img\page1.jpg" />
+    <Content Include="img\prevBtnTop.png" />
+    <Content Include="img\QRcode.png" />
+    <Content Include="img\shopping-cart.png" />
+    <Content Include="img\suggest1.jpg" />
+    <Content Include="img\suggest2.jpg" />
+    <Content Include="img\suggest3.jpg" />
+    <Content Include="img\suggest4.jpg" />
+    <Content Include="Models\games.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>games.edmx</DependentUpon>
+      <LastGenOutput>games.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\games.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>games.edmx</DependentUpon>
+      <LastGenOutput>games.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\games.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>games.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\games.edmx.diagram">
+      <DependentUpon>games.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\192.168.62.21.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\first\menu.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\menu.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\tab.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout-2.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\signup\signup.cshtml" />
+    <Content Include="Views\Game\Leisure.cshtml" />
+    <Content Include="Views\Game\Adventure.cshtml" />
+    <Content Include="Views\Home\PointCard.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Game\Mulpitlayer.cshtml" />
+    <Content Include="Views\Game\Cosplay.cshtml" />
+    <Content Include="Views\Game\Action.cshtml" />
+    <Content Include="Views\Game\Strategy.cshtml" />
+    <Content Include="Views\Game\Racing.cshtml" />
+    <Content Include="Views\Game\Independent.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56009</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56009/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 封裝。請啟用 NuGet 封裝還原，以下載該封裝。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

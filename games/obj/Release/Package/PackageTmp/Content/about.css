@@ -1,0 +1,81 @@
+header{
+    height: 5vh;
+}
+
+footer a{
+    color: white;
+}
+
+p{
+    color: white!important;
+}
+.col-md-6{
+    color: white!important;
+}
+div.container h3{
+    line-height: 60px;
+    /* border-bottom: 1px solid #fff; */
+    text-align:center;
+    margin: auto;
+}
+.Circles{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(60, 84, 94);
+    border-radius: 50%;
+    text-align: center;
+    /* display: inline-block; */
+}
+
+.b1{
+    background-color: rgb(104, 145, 162);
+    font-size: 14px;
+    height: 36px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+    color: white;
+    width: 80px;
+    margin: auto;
+}
+.b1:hover,
+.b1:active,
+.b1:focus {
+    background-color: rgb(82, 115, 129);
+}
+.contact-form{
+    margin: auto;
+    width: 90%;
+    /* text-align: center; */
+}
+.contact-box{
+    float: left;
+}
+@media screen and (max-width:600px) {
+    h1,h2,h3,h4,h5{
+        font-size: 30px;
+    }
+    .p-1,.p-2,.p-3,.p-4,.p-5{
+        padding:0!important;
+    }
+    .m-1,.m-2,.m-3,.m-4,.m-5{
+        margin:0!important;
+    }
+    .Circles{
+        line-height: 60px;
+        margin: auto;
+    }
+    .clearfix div{
+        float: none;
+    }
+    .clearfix{
+       
+        text-align: center;
+    }
+    .contact-box h5{
+        font-size: 20px;
+    }
+}

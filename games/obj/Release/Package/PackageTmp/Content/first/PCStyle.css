@@ -1,0 +1,384 @@
+@media screen and (min-width:1200px) {
+    .fixed-width {
+        width:1200px;
+        margin: auto;
+    }
+    .col-1 {
+        width: calc(100% / 12 * 1);
+    }
+    .col-2 {
+        width: calc(100% / 12 * 2);
+    }
+    .col-3 {
+        width: calc(100% / 12 * 3);
+    }
+    .col-4 {
+        width: calc(100% / 12 * 4);
+    }
+    .col-5 {
+        width: calc(100% / 12 * 5);
+    }
+    .col-6 {
+        width: calc(100% / 12 * 6);
+    }
+    .col-7 {
+        width: calc(100% / 12 * 7);
+    }
+    .col-8 {
+        width: calc(100% / 12 * 8);
+    }
+    .col-9 {
+        width: calc(100% / 12 * 9);
+    }
+    .col-10 {
+        width: calc(100% / 12 * 10);
+    }
+    .col-11 {
+        width: calc(100% / 12 * 11);
+    }
+    .col-12 {
+        width: calc(100% / 12 * 12);
+    }
+    [class^="col"]{
+        float: left;
+        padding: 15px;
+    }
+    /* ----nav---- */
+    /* ---- menu ---- */
+    .burger-box{display: none}
+    .burger{
+    }
+
+    .burger::after{}
+
+    .burger::before{}
+    
+    nav {
+        position: fixed;
+        background-color:rgb(35, 36, 35);
+        /* color: rgba(255, 255, 255, 0.836); */
+    }
+
+    nav a{
+        display: block;
+        text-decoration: none;
+        padding: 18px 20px;
+        color:  rgb(209, 209, 209);
+        border: 0;
+        font-size: 20px;
+    }
+    
+    nav .menu{
+        float: left;
+        padding-left: 30px;
+    }
+
+    nav .menu >li {
+        position: relative;
+        display: block;
+        float: left;
+        border-left: #3b3b3bef 1px solid;
+        border-right: #000 1px solid;
+    }
+
+    nav .menu >li a:hover,nav .login >li a:hover{
+        background-color: rgb(57, 58, 57);
+    }
+
+    .menu-calss{
+        width: 150px;
+        position: fixed;
+        /* display: none; */
+        float: none;
+        background-color: #0f091f;
+        /* text-align: center; */
+        
+    }
+
+    
+    .menu-calss >li a:hover{
+        background-color: rgb(27, 30, 51);
+        color: #fff;
+    }
+
+    .menu-logo{
+        padding:5px 0 0 0;
+        margin: 0;
+        float: left;
+        width: 100px;
+        
+    }
+
+    .login li{
+        float: right;
+        border-left: #3b3b3bef 1px solid;
+        border-right: #000 1px solid;
+    } 
+ 
+
+    /* .login li a:hover{
+        background-color: rgb(27, 30, 51);
+    } */
+
+
+    /* ---- header ---- */
+    header{
+        color: white;
+        padding-top: 50px;
+        background-color: #08181fef;
+    }
+    header .col-4{
+        padding-left: 0;
+    }
+    .Banner-demo .col-3{
+        padding-right: 0;
+    }
+    
+    /* ----container---- */
+    .container{
+        background-color: #08181fef;
+        /* height: 1000px; */
+        color: white;
+        margin: 0 auto;
+        
+    }
+    .class .class-box{
+        padding: 15px;
+        float: left;
+        width: calc(100% / 8 * 1);
+    }
+
+    .Banner{
+        width: 100%;
+        height: 434px;
+        overflow: hidden;
+    }
+    /* .Banner-demo{
+        margin: 0 auto;
+    } */
+    .Banner-demo .col-3{
+        padding:20px 8px 8px 5px;
+    }
+
+    .news{
+        padding: 0 0 30px 0;
+        background-color: rgba(255, 255, 255, 0.048); 
+    }
+    .news ul{
+        margin: 10px 0 0 40px;
+    }
+
+    .news li{
+       padding: 5px 0 5px 5px;
+        list-style-type:square ;
+    }
+
+    .news li a{
+        text-decoration: none;
+        color: rgb(221, 221, 221);
+    }
+
+    .news li a:hover{
+        border-bottom: rgb(221, 221, 221) 1px solid;
+    }
+
+    .news .btn{
+        float: right;
+        font-weight: lighter;
+        font-size:14px; 
+        display: inline-block;
+        border: solid 1px #fff; 
+        color: #fff;
+        text-decoration: none;
+        width:60px ;
+        line-height: 25px;
+        text-align: center;
+        border-radius:20px;
+    }
+    .news .btn:hover{
+        background-color: #fff;
+        color: #08181fef;
+    }
+    .news-logo{
+        padding-top: 20px;
+    }
+
+    
+    /* ---- suggest ---- */
+    .suggest h2{
+        padding-left:20px; 
+    }
+    /* ---- hot ---- */
+    .ranking{
+        padding: 0 0 30px 0;
+        border: rgb(197, 197, 197) 1px solid; 
+        border-radius:20px;
+        overflow: hidden;
+    }
+    .ranking h3{text-align: center}
+    .ranking ul{
+        margin: 10px 10px 0 30px;
+    }
+
+    .ranking li{
+       padding: 5px 0 5px 5px;
+        list-style-type:decimal ;
+    }
+    .ranking li a{
+        text-decoration: none;
+        color: rgb(221, 221, 221);
+     }
+    .ranking li:hover{
+        background-color: rgba(255, 255, 255, 0.137)
+    }
+
+    .card{
+        margin-bottom: 15px;
+        background-color: rgba(255, 255, 255, 0.137);
+    }
+    .card a{
+        text-decoration: none;
+        color: rgb(221, 221, 221);
+    }
+    .card a:hover{
+        box-shadow:1px 1px 3px 2px rgba(20%,20%,40%,0.5) inset;
+    }
+
+    .card .card-text
+    {   
+        font-size: 14px;;
+        height: 70px;
+        padding: 10px;
+    }
+    .card .btn{
+        float: right;
+        font-weight: lighter;
+        font-size:14px; 
+        display: inline-block;
+        border: solid 1px #fff; 
+        color: #fff;
+        text-decoration: none;
+        width:90px ;
+        line-height: 25px;
+        text-align: center;
+        /* border-radius:10px; */
+        margin-top:10px;
+        
+    }
+
+    /* ---- sale ---- */
+    .sales .col-12{
+         background-color: rgba(67, 124, 247, 0.137);
+         padding:;
+    }
+
+    .dayBox{
+        top: 2px;
+        right: 15px;
+        position:relative;
+        line-height:30px;
+        float: right;
+        padding:0 5px;
+        background-color: rgba(139, 247, 67, 0.137);
+        font-size: 15px;
+    }
+    .sales .col-6{
+        padding: 10px 5px;
+        margin: 0 auto;
+    }
+
+    .sales .card{
+        padding: 0;
+        
+    }
+    .sales .card-text{
+        padding: 10px;
+        height: 40px;
+    }
+    .card-title{
+        color: #fff
+    }
+    .sales .card-text p{
+        color: rgba(221, 221, 221, 0.774);
+    }
+    .sales .card-text p a{
+        font-size:14px;
+    }
+    .sales .btn{
+        float: right;
+        font-weight: lighter;
+        font-size:12px; 
+        border: solid 1px #fff; 
+        color: #fff;
+        text-decoration: none;
+        width:120px ;
+        line-height: 20px;
+        text-align: center;
+        position:relative;
+        top: -30px;
+        right: -7px;
+    }
+    .sales .btnOff{
+        background-color: #fff;
+        color: #08181fef;
+        float: left;
+        padding: 2px;
+        
+    }
+
+    .sales .col-6 .col-6{
+        padding: 0;
+        margin: 0;
+    }
+    
+
+    /* ---- footer ---- */
+    footer{
+        text-align: left;
+        background-color:rgb(35, 36, 35);
+        color: white;
+
+    }
+    footer .footer{
+
+    }
+
+    .footer div{
+        float: left;
+        padding: 50px 30px;
+    }
+    footer .col-12{
+        background-color:black;
+        padding: 10px;
+        text-align: center;
+    }
+
+    footer .footer h3{
+        padding-bottom: 10px;
+    }
+    footer ul li{
+        padding: 2px 0;
+       
+    }
+    footer ul li a{
+        text-decoration:none; 
+        color: rgba(255, 255, 255, 0.623)
+    }
+    .col-4 .fb{
+        padding-left:0;
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+    .col-4 i{
+        float: none;
+        padding: 5px 0 5px 10px;
+    }
+    .col-4 i{
+        color: white;
+    }
+    .QRcode{
+        padding-top: 20px;
+        padding-left: 15%;
+        width:60%;
+    }
+}

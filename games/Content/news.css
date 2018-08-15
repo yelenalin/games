@@ -1,0 +1,126 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+  }
+
+  
+  #tab-button {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  #tab-button li {
+    display: table-cell;
+    width: 20%;
+  }
+  #tab-button li a {
+    display: block;
+    padding: .5em;
+    background: #eee;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+  }
+  #tab-button li:not(:first-child) a {
+    border-left: none;
+  }
+  #tab-button li a:hover,
+  #tab-button .is-active a {
+    border-bottom-color: transparent;
+    background: #fff;
+  }
+  .tab-contents {
+    padding: .5em 2em 1em;
+    border: 1px solid #ddd;
+  }
+  
+  
+  
+  .tab-button-outer {
+    display: none;
+  }
+  .tab-contents {
+    margin-top: 20px;
+  }
+
+  .tabs ul{
+    padding: 20px;
+}
+.tabs ul li{
+    color:#ddd;
+    list-style-type:square ;
+    border-bottom: 1px solid #ddd;
+    padding-top:10px ;
+}
+.tabs ul  a{
+  color:#ddd;
+  line-height: 40px;
+  font-size: 20px
+}
+#tab{
+  padding: 50px 0;
+}
+#tab h2{
+  margin:5% 0;
+  line-height: 60px;
+  border-bottom: 1px solid #fff;
+}
+
+  @media screen and (min-width: 600px) {
+    .tabs ul{
+        padding: 20px;
+    }
+    .tabs ul li{
+        color:#ddd;
+        list-style-type:square ;
+        border-bottom: 1px solid #ddd;
+        padding-top:10px ;
+    }
+    .tabs ul  a{
+      color:#ddd;
+      line-height: 40px;
+      font-size: 20px
+  }
+  #tab{
+      padding: 50px;
+      padding-bottom: 200px;
+  }
+  .tabs {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .tabs ul li p{
+        padding: 20px;
+        /* border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd; */
+        line-height: 30px;
+        }
+    .tabs {
+        padding:0;
+        width: 100%;
+    }
+    
+    .tab-button-outer {
+      position: relative;
+      z-index: 2;
+      display: block;
+    }
+    .tab-select-outer {
+      display: none;
+    }
+    .tab-contents {
+      position: relative;
+      top: -1px;
+      margin-top: 0;
+    }
+  }
+  
+footer a{
+    color: white;
+}
+

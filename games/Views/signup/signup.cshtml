@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "signup";
+    Layout = "~/Views/Shared/_Layout-2.cshtml";
+}
+<link rel="stylesheet" href="@Url.Content("~/Content/signup.css")">
+<!-- ---- header ---- -->
+<header></header>
+<!-- ---- container ---- -->
+
+<div class="container clearfix fixed-width">
+    <div class="signup-header"></div>
+    <div class="card">
+        <p id="profile-name" class="profile-name-card"></p>
+        <h3>註冊</h3>
+        <hr>
+
+        <div class="form-group">
+            <input type="text" name="name" id="name" class="form-control input-lg" placeholder="請輸入姓名/Name" tabindex="1">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="請輸入帳號/Username" tabindex="2">
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="請輸入電子信箱/Email Address" tabindex="3">
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input type="password" name="password" id="password" class="form-control input-lg" placeholder="請輸入密碼/Password" tabindex="4">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="請再次確認密碼/Confirm Password"
+                           tabindex="6">
+                </div>
+            </div>
+        </div>
+        <label>生日/Birth Date</label>
+        <div class="form-group">
+            <input class="form-control input-lg" name="birth" id="birth" type="date">
+        </div>
+
+        <div class="form-group">
+            <label>性別 : </label>
+            <label class="radio-inline">
+                <input type="radio" name="gender" value="M" id=male />女
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="gender" value="F" id=female />男
+            </label>
+        </div>
+        <div id="remember" class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> 我同意隱私權條款
+            </label>
+        </div>
+        <button class="b1" type="submit">送出</button>
+    </div>
+    <!-- /card-container -->
+
+</div>
+
